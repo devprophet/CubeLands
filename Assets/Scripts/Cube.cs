@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cube.cs                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agougaut <alex.code@icloud.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/18 15:16:18 by agougaut          #+#    #+#             */
+/*   Updated: 2018/04/18 15:16:32 by agougaut         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

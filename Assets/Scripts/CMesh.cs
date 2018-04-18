@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   CMesh.cs                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agougaut <alex.code@icloud.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/18 15:16:49 by agougaut          #+#    #+#             */
+/*   Updated: 2018/04/18 15:16:51 by agougaut         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
