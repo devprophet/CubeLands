@@ -6,7 +6,7 @@
 /*   By: agougaut <alex.code@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 15:16:49 by agougaut          #+#    #+#             */
-/*   Updated: 2018/04/18 15:16:51 by agougaut         ###   ########.fr       */
+/*   Updated: 2018/04/19 12:16:43 by agougaut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ public class CMesh {
 		vertices 	= new List<Vector3>();
 		triangles 	= new List<int>();
 		uvs 		= new List<Vector2>();
+	}
+
+	public CMesh(CMesh m){
+		vertices = new List<Vector3>(m.vertices);
+		triangles = new List<int>(m.triangles);
+		uvs = new List<Vector2>(m.uvs);
 	}
 
 	// Ajoute un tableau de vertex

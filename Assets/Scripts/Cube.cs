@@ -6,7 +6,7 @@
 /*   By: agougaut <alex.code@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 15:16:18 by agougaut          #+#    #+#             */
-/*   Updated: 2018/04/18 15:16:32 by agougaut         ###   ########.fr       */
+/*   Updated: 2018/04/19 12:10:47 by agougaut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Cube {
-	
-	const float size = .5f;
 
-	public static CMesh CreateCube(Vector3 position, bool[] faces){
+	public static CMesh CreateCube(Vector3 position, float size, bool[] faces){
 		if(faces.Length != 6){
-			throw new UnityException("Faces array do not conains 6 elements!", new System.IndexOutOfRangeException());
+			throw new System.Exception("Faces array do not conains 6 elements!", new System.IndexOutOfRangeException());
 		}
 		
 		Vector3[] v = new Vector3[]{

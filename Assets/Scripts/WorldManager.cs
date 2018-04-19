@@ -6,7 +6,7 @@
 /*   By: agougaut <alex.code@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 15:46:18 by agougaut          #+#    #+#             */
-/*   Updated: 2018/04/18 17:37:31 by agougaut         ###   ########.fr       */
+/*   Updated: 2018/04/19 11:54:19 by agougaut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ public class WorldManager : MonoBehaviour {
 			throw new System.Exception(string.Format("Error the chunk at {0} not exist!", at));
 	}
 
-	public Chunk CreateChunk(Vector3 at){
-		GameObject chunk = new GameObject("Chunk " + at.ToString());
-		chunk.transform.position = at;
+	public Chunk CreateChunk(Vector3 at, Vector3 pos){
+		GameObject chunk = new GameObject("Chunk " + pos.ToString());
+		chunk.transform.position = pos;
 		var c = chunk.AddComponent<Chunk>();
 		c.WManager = this;
 		Chunks.Add(at, c);
@@ -64,7 +64,6 @@ public class WorldManager : MonoBehaviour {
 		if(ChunkExist(at)){
 			Destroy(Chunks[at].gameObject);
 			Chunks.Remove(at);
-			//Debug.Log("Deleted!");
 		}else{
 			Debug.LogWarningFormat("Can't destroy the chunk at {0} beacause is not exist!", at);
 		}
