@@ -6,7 +6,7 @@
 /*   By: agougaut <alex.code@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 13:58:55 by agougaut          #+#    #+#             */
-/*   Updated: 2018/04/19 15:34:59 by agougaut         ###   ########.fr       */
+/*   Updated: 2018/04/19 16:00:41 by agougaut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ using System.IO;
 
 public class TextureLoader : MonoBehaviour {
 	
-	private static Dictionary<string, CubeTexture> cachedCubeTexture = new Dictionary<string, CubeTexture>();
 	private static Dictionary<string, CubeTexture> cubeTexturesLoaded = new Dictionary<string, CubeTexture>();
 
 	public static void Load(){
@@ -43,35 +42,24 @@ public class TextureLoader : MonoBehaviour {
 		var files = di.GetFiles();
 		
 		foreach(var file in files){
-			
+			if(file.Extension == ".json"){
 			var sr = file.OpenText();
 			string jsonStr = sr.ReadToEnd();
 			sr.Dispose();
-			
 			var cubeTexture = JsonUtility.FromJson<CubeTexture>(jsonStr);
 			
 			if(!cubeTexturesLoaded.ContainsKey(cubeTexture.TextureName))
 				cubeTexturesLoaded.Add(cubeTexture.TextureName, cubeTexture);
-			
-		}
-	}
-
-	public static CubeTexture Load(string path){
-		if(File.Exists(path)){
-			if(cachedCubeTexture.ContainsKey(path))
-				return cachedCubeTexture[path];
-			var ct = JsonUtility.FromJson<CubeTexture>(path);
-			if(ct != null){
-				cachedCubeTexture.Add(path, ct);
 			}
-			return ct;
-		}else{
-			return null;
 		}
 	}
 
-	public static void ClearCache(){
-		cachedCubeTexture.Clear();
+	public static bool TextureExist(string name){
+		return cubeTexturesLoaded.ContainsKey(name);
+	}
+
+	public static CubeTexture GetTexture(string name){
+		return cubeTexturesLoaded[name];
 	}
 
 	

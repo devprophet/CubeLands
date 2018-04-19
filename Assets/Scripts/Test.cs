@@ -6,7 +6,7 @@
 /*   By: agougaut <alex.code@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 14:57:31 by agougaut          #+#    #+#             */
-/*   Updated: 2018/04/19 15:21:06 by agougaut         ###   ########.fr       */
+/*   Updated: 2018/04/19 15:50:51 by agougaut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public class Test : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		TextureLoader.Load();
 		var path = "/Users/alexis/Desktop/base.json";
 		var sw = File.CreateText(path);
 		

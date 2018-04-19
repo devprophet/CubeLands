@@ -1,0 +1,38 @@
+{
+    "Author": "Alex",
+    "TextureName": "__base__",
+    "TextureTileSet": "http://mon.addresse.fr/mon.fichier.json",
+    "isLocal": false,
+    "ElementsOnXAxis": 64,
+    "ElementsOnYAxis": 64,
+    "RangeOnXAxis": false,
+    "XMin": 0,
+    "XMax": 0,
+    "RangeOnYAxis":true,
+    "YMin": 0,
+    "YMax": 64,
+    "FaceBack": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "FaceRight": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "FaceFront": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "FaceLeft": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "FaceTop": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "FaceBottom": {
+        "x": 0.0,
+        "y": 0.0
+    }
+}
