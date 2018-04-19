@@ -6,7 +6,7 @@
 /*   By: agougaut <alex.code@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 13:58:45 by agougaut          #+#    #+#             */
-/*   Updated: 2018/04/19 16:56:17 by agougaut         ###   ########.fr       */
+/*   Updated: 2018/04/19 17:24:33 by agougaut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,14 @@ public class CubeTexture
     public string TextureName;
     public string TextureTileSet;
     public bool isLocal;
+    
     public int ElementsOnXAxis;
     public int ElementsOnYAxis;
+
     public bool RangeOnXAxis;
     public int XMin;
     public int XMax;
+
     public bool RangeOnYAxis;
     public int YMin;
     public int YMax;
@@ -51,13 +54,16 @@ public class CubeTexture
 
     public Vector2[] CalculatedUV(){
         List<Vector2> uvs = new List<Vector2>();
+        
         System.Random rand = new System.Random();
+        
         Vector2 r = new Vector2( RangeOnXAxis ? rand.Next(XMin, XMax) : 0, RangeOnYAxis ? rand.Next(YMin, YMax) : 0);
-        var ba = FaceBack + r;
-        var ri = FaceRight + r;
-        var fr = FaceFront + r;
-        var le = FaceLeft + r;
-        var to = FaceTop + r;
+
+        var ba = FaceBack   + r;
+        var ri = FaceRight  + r;
+        var fr = FaceFront  + r;
+        var le = FaceLeft   + r;
+        var to = FaceTop    + r;
         var bo = FaceBottom + r;
 
         uvs.AddRange(UVMapping.GetTileUV(ElementsOnXAxis, ElementsOnYAxis, ba));

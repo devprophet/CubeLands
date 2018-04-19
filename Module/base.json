@@ -3,36 +3,42 @@
     "TextureName": "__base__",
     "TextureTileSet": "http://mon.addresse.fr/mon.fichier.json",
     "isLocal": false,
-    "ElementsOnXAxis": 64,
-    "ElementsOnYAxis": 64,
+    "ElementsOnXAxis": 16,
+    "ElementsOnYAxis": 16,
     "RangeOnXAxis": false,
     "XMin": 0,
     "XMax": 0,
-    "RangeOnYAxis":true,
+    "RangeOnYAxis":false,
     "YMin": 0,
-    "YMax": 64,
+    "YMax": 0,
+
     "FaceBack": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 3,
+        "y": 15
     },
+
     "FaceRight": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 3,
+        "y": 15
     },
+
     "FaceFront": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 3,
+        "y": 15
     },
+
     "FaceLeft": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 3,
+        "y": 15
     },
+
     "FaceTop": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 0,
+        "y": 15
     },
+
     "FaceBottom": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 2,
+        "y": 15
     }
 }
