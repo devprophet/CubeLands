@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 2473084}
   - component: {fileID: 2473085}
   - component: {fileID: 2473086}
+  - component: {fileID: 2473087}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -215,7 +216,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2473079}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f312d1e550204d25b9165baeb3ccb93, type: 3}
   m_Name: 
@@ -235,6 +236,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
+--- !u!114 &2473087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2473079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4392f6826cc41078d5ed409afe4557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1342278931
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,8 +276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChunkSize: 50
   CubeSize: 1
-  PerlinSize: 0.05
-  PerlinPower: 2
+  PerlinSize: 0.025
+  PerlinPower: 10
   PerlinSeed: Hello world!
 --- !u!4 &1342278933
 Transform:

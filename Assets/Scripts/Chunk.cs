@@ -6,7 +6,7 @@
 /*   By: agougaut <alex.code@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 15:23:59 by agougaut          #+#    #+#             */
-/*   Updated: 2018/04/19 12:28:52 by agougaut         ###   ########.fr       */
+/*   Updated: 2018/04/19 14:53:27 by agougaut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ public class Chunk : MonoBehaviour {
 				var f = (int)(Mathf.PerlinNoise( p.x * WManager.PerlinSize, (p.z + 1) * WManager.PerlinSize) * WManager.PerlinPower) == h ? true : false;
 				var b = (int)(Mathf.PerlinNoise( p.x * WManager.PerlinSize, (p.z - 1) * WManager.PerlinSize) * WManager.PerlinPower) == h ? true : false;
 
-				m.AddCMesh(Cube.CreateCube(new Vector3(i, h, j), WManager.CubeSize / 2f, new bool[]{!b, !r, !f, !l, true, false}));
+				m.AddCMesh(Cube.CreateCube(new Vector3(i, h, j), WManager.CubeSize / 2f, new bool[]{!b, !r, !f, !l, true, false}/* , "/Users/alexis/Desktop/base.json" */));
 			}
 		}
 		return m;
